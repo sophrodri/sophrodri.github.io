@@ -1,0 +1,95 @@
+
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sophie Rodriguez's Resume</title>
+  </head>
+
+  <body>
+<h1> <center>Sophia Rodriguez</center></h1>
+
+<center>
+<address class="">
+  Miami, FL 33129 <br>
+  305-923-3589 <br>
+</address>
+<a href="<a href="mailto:sophrodri.design@gmail.com?subject=NewClient">sophrodri.design@email.com</a></a><br>
+<a href="www.sophrodri.com">sophrodri.com</a>
+<br>
+
+<br>
+<br>
+<img src="Images/ResumeHeadshot.jpeg" alt="">
+</center>
+
+
+
+
+<br>
+<hr>
+<h2>Summary</h2>
+<p>My work background is mainly structured around content creation. I worked at the Orange Umbrella Consultancy where I had to dive into several forms of media where my design is needed. It gave me an advantage to discover and learn what's fresh and new in terms of what consumers want out of communication services. When apart of an agency, employees are constantly put in the position to collaborate with others. Because of this, I am more than comfortable with helping others as it is apart of my work; if the team succeeds then the dream succeeds.  Besides working in an agency setting,  I also pride myself in working directly for the University of Miami as a graphic design assistant for Admissions Marketing; which allowed me to learn the look and feel of the University's design flow upclose.  </p>
+  </body>
+
+<br>
+<hr>
+<h2>Education</h2>
+<ul>
+  <li><h3><strong>University of Miami</strong></h3></li>
+  Class of 2022 <br>
+  <p>Creative Advertising + Interactive Media Major, Marketing Minor.</p>
+
+  <br>
+
+  <li><h3><strong>Our Lady of Lourdes Academy</strong></h3></li>
+  Class of 2018 <br>
+  <p>All girls' Catholic college prepatory school in South Miami. </p>
+</ul>
+
+<br>
+<hr>
+<h2>Experience</h2>
+<ul>
+  <li><h3><strong>Graphic Designer</strong></h3></li>
+  <h4>University of Miami Student Affairs</h4>
+  Present day
+
+  <p>Designing content for the Department of Student Affairs. </p>
+  <br>
+
+  <li><h3><strong>Assistant Graphic Designer</strong></h3></li>
+  <h4>University of Miami Admissions Department</h4>
+  Fall 2019
+  <p>Assisted in designing print and digital deliverables to incoming students and alumni for the Admissions’ Marketing Department, aswell as internal branding for the UM employee website.</p>
+
+  <br>
+
+  <li><h3><strong>Designer</strong></h3></li>
+  <h4>Orange Umbrella Consultancy </h4>
+  Spring 2019 - present day
+  <p>Orange Umbrella is a student run agency in the University of Miami. My position involves the conceptualization of creative deliverables for clients across a variety of media including: web, social, print, etc.
+  </p>
+</ul>
+<br>
+<hr>
+
+<h2>Skills </h2>
+
+<table>
+  <tr>
+    <strong>Software knowledge</strong>
+  </tr>
+
+  <td> Photoshop - Intermediate <br>
+  Illustrator - Intermediate <br>
+Indesign - Intermediate <br>
+Microsoft Office - Intermediate <br>
+HTML/CSS - Beginner <br>
+Javascript - Beginner 
+</td>
+</table>
+
+
+
+</html> <!-- end of HTML -->
