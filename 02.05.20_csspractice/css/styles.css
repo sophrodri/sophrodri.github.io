@@ -10,13 +10,46 @@ color:red;
   color:green;
 }
 
-p{color: blue;}
+p{color: #000000;}
 
 div{
   width:250px;
   height:250px;
-  border:solid 4px #333333;
+  border:solid 4px  #8e21d4;
   margin: 10px;
   padding: 50px;
   display:inline-block;
+}
+
+.box{
+  background-color: red;
+  height: 100px;
+  width: 100px;
+
+  p{color:white;}
+}
+
+body{
+  background: #7FFF00
+}
+
+.color-demmo-1{
+  background: rgba(255, 255, 0, 0.5);
+  margin: 18px;
+  padding: 20px
+}
+
+.image-bg{
+  background-image: url("../images/original-4.jpg");
+background-size: fixed;
+background-repeat: no-repeat;
+  width:500px;
+  height: 500px;
+  border: solid 0px
+}
+
+.content-1  p{
+  background-color: #000000;
+  color: white;
+  padding: 35px;
 }
