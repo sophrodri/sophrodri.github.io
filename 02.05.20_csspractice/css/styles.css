@@ -29,6 +29,21 @@ div{
   p{color:white;}
 }
 
+
+.box:hover{
+  background: #000000;
+  color:#ffffff
+
+}
+
+.box.img:hover{
+background-image: url("../images/original-4.jpg");
+background-size: fixed;
+background-repeat: no-repeat;
+  width:100px;
+  height: 100px;
+}
+
 body{
   background: #7FFF00
 }
