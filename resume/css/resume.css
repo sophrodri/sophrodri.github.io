@@ -3,40 +3,120 @@ font-family: 'Lato', sans-serif;
   font-size: 25px;
 }
 
-.div-h1{
+#div-h1{
   width:1024px;
-  height:250px;
-  border:solid 10px  #8e21d4;
+  height:50px;
+  border:solid 0px  #8e21d4;
   margin: 10px;
   padding: 50px;
   display:inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 70px;
+  font-family: 'Lato', sans-serif;
+  font-size: 100px;
   font-weight: 800;
-  color: white;
-  -webkit-text-stroke: 3px black;
+   color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px black;
   text-align: center;
 }
 
-.sub-title{
-font-family: 'Lato', sans-serif;
-font-size: 70px;
-color: none;
--webkit-text-stroke: 2px black;
-text-align: center
+
+.div-head{
+  width:1024px;
+  height:30px;
+  border:solid 0px  #8e21d4;
+  margin: 10px;
+  padding: 50px;
+  display: inline-block;
+  text-align: center;
 }
 
-.image-bg{
+.div-sub{
+  width:1024px;
+  height:50px;
+  border:solid 0px  #8e21d4;
+  margin: 10px;
+  padding: 50px;
+  display:inline-block;
+font-family: 'Lato', sans-serif;
+font-size: 80px;
+color: rgba(0, 0, 0, 0);
+-webkit-text-stroke: 1px black;
+text-align: center;
+}
+
+.div-text{
+  width:1024px;
+  height:100px;
+  border:solid 0px  #8e21d4;
+  margin: 10px;
+  padding: 50px;
+  display:inline-block;
+font-family: 'Lato', sans-serif;
+font-size: 25px;
+color: black;
+-webkit-text-stroke: 1px black;
+text-align: center;
+}
+
+
+.div-table{
+  width:1024px;
+  height:100px;
+  margin: 10px;
+  padding: 50px;
+  display:inline-block;
+}
+
+
+.div-element{
+  width:1024px;
+  height:150px;
+  margin: 10px;
+  padding: 50px;
+  display:inline-block;
+  border: solid 0px  #8e21d4;
+  align-items: center;
+}
+
+#image-bg{
     background-image: url("../images/gradientsunset.png");
   background-size: fixed;
   background-repeat: no-repeat;
-    width:500px;
-    height: 500px;
-    border: solid 0px
+    width:1024px;
+    height: 768px;
+    border: solid 0px;
+  }
+
+
+  .div-exlist{
+    width:1024px;
+    height:1000px;
+    border:solid 0px  #8e21d4;
+    margin: 10px;
+    padding: 50px;
+    display:inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  color: black;
+  -webkit-text-stroke: 1px black;
+  text-align: left;
+  }
+
+  .div-edlist{
+    width:1024px;
+    height:500px;
+    border:solid 0px  #8e21d4;
+    margin: 10px;
+    padding: 50px;
+    display:inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  color: black;
+  -webkit-text-stroke: 1px black;
+  text-align: left;
   }
 
   a:link {
-    color: black;
+    color: white;
     text-decoration: none;
   }
 
@@ -47,10 +127,10 @@ text-align: center
 
   /* mouse over link */
   a:hover {
-    color: white;
+    color: blue;
   }
 
   /* selected link */
   a:active {
-    color: blue;
+    color: hotpink;
   }
