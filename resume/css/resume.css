@@ -124,11 +124,6 @@ text-align: center;
     text-decoration: none;
   }
 
-  /* visited link */
-  a:visited {
-    color: green;
-  }
-
   /* mouse over link */
   a:hover {
     color: blue;
