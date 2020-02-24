@@ -3,9 +3,10 @@ display: grid;
 background: #ccc;
 grid-template-columns: repeat(12, minmax(0,1fr));
 
+
+grid-template-rows: 100px 500px 300px;
+
 }
-
-
 
 .logo{
 background: #33f5f2
