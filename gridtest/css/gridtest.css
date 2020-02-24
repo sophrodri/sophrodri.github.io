@@ -1,0 +1,37 @@
+.main-wrapper{
+display: grid;
+background: #ccc;
+grid-template-columns: repeat(12, minmax(0,1fr));
+
+}
+
+
+
+.logo{
+background: #33f5f2
+}
+
+
+.menu{
+  background: #7af533
+}
+
+.article{
+  background: #f53333
+
+}
+
+.left-pic{
+background: #822fed
+}
+
+.mid-pic{
+  background: #e62ca8
+
+}
+
+
+.right-pic{
+  background: #e3e62c
+
+}
