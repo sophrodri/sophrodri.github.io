@@ -15,11 +15,11 @@ body, html{
 }
 
 .logo{
-background: #FFD0F9;
+/* background: #FFD0F9; */
 grid-column: 1/2;
 grid-row: 1/1;
 align-items: right;
-display: block;
+display: inline-flex;
 padding: 10px;
 
 }
@@ -31,13 +31,13 @@ width: 100px;
 
 .menu{
 font-family: 'Raleway', sans-serif;
-  background: #FFD0F9;
+  /* background: #FFD0F9; */
   grid-column:4/12;
   grid-row: 1/1;
   padding: 10px;
-
-
+  display: inline-flex;
 }
+
 
 nav ul{
 margin: 0;
@@ -48,7 +48,7 @@ list-style: none;
 nav li{
 display: inline-block;
 align-content: right;
-
+padding: 15px;
 }
 
 nav a{
@@ -69,11 +69,14 @@ a:hover{
   background-image: url("../images/banner.jpg");
   background-repeat: no-repeat;
 width: 100%;
-height: 100%;
+height: 600px;
+background-size: cover;
+/* contain would fit it all. for sizes smaller. when you change it to contain you also have to change the height*/
+background-position: center top;
 
   grid-column: 1/12;
   grid-row: 3/3;
-  margin-bottom: 200px;
+
 
 }
 
@@ -92,6 +95,7 @@ grid-column: 1/1;
 grid-row: 11/11;
 margin-top: 100px;
 margin-right: 50px;
+/* display: inline-block */
 
 
 
@@ -118,7 +122,8 @@ margin-top: 100px;
 
 
 
-
+/* absolute vs relative for the text in the text boc. start always from the bottom:0
+20  */
 
 
 
