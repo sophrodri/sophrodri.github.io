@@ -32,10 +32,11 @@ width: 100px;
 .menu{
 font-family: 'Raleway', sans-serif;
   /* background: #FFD0F9; */
-  grid-column:4/12;
+  grid-column:7/12;
   grid-row: 1/1;
   padding: 10px;
   display: inline-flex;
+  margin-left: 400px;
 }
 
 
@@ -48,7 +49,7 @@ list-style: none;
 nav li{
 display: inline-block;
 align-content: right;
-padding: 15px;
+padding: 20px;
 }
 
 nav a{
@@ -80,21 +81,36 @@ background-position: center top;
 
 }
 
+.text-container{
+  position: absolute;
+bottom: 0;
+color: white;
+}
 
 
+.sec-grid{
+  display:grid;
+
+  grid-template-columns: repeat(11, minmax(0,auto));
+  /* easiest thing to do is to do rows by 12 */
+  grid-template-rows: repeat(11, minmax(0, auto));
+  gap: 10px;
+  display: inline-flex;
+
+  grid-template-columns: auto 500px 3fr;
+}
 
 .pic-style{
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
+grid-row: 10/11;
+
 }
 
 
 .left-pic{
 background: #822fe4;
-grid-column: 1/1;
-grid-row: 11/11;
-margin-top: 100px;
-margin-right: 50px;
+
 /* display: inline-block */
 
 
@@ -103,9 +119,8 @@ margin-right: 50px;
 
 .mid-pic{
   background: #e62ca8;
-grid-column: 6/7;
-grid-row: 11/11;
-margin-top: 100px;
+
+
 
 
 
@@ -113,9 +128,8 @@ margin-top: 100px;
 
 .right-pic{
   background: #e3e62c;
-  grid-column: 11/12;
-  grid-row: 11/11;
 
+/* three pics should be contained in another grid. Display grid in the parent section. 3 columns of one section each */
 
 
 }
