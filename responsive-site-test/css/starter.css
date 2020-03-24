@@ -1,0 +1,136 @@
+/* ========= Add Here the styles that will be used by all viewports and for smaller viewports */
+html{
+  /* I'm adding this class to prevent the containers to change size when they have padding. */
+  box-sizing: border-box;
+}
+/* This makes all the pseudo-elements created by the browser inherit the box-sizing of the html */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* In case you want to have a full width image or content. The body by default has margin and padding */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/*=====================================================================================*/
+/* Add Here styles for larger phones and tablets */
+@media only screen and (min-width: 480px) {
+
+
+/* PARENT */
+  .main-wrapper{
+  display:grid;
+  grid-template-columns: repeat(15, minmax(0,auto));
+}
+  /* easiest thing to do is to do rows by 12 */
+
+/* CHILDREN  */
+
+
+
+  .logo{
+  background: #FFD0F9;
+  grid-column: 1;
+  align-items: center;
+  }
+
+  /* .logo-style{
+  height: 200px;
+  width: 200px;
+
+  }
+
+  .header-pic{
+  height: 1308px;
+  width: 1313px;
+  } */
+
+  .article{
+    background: #f53333;
+    grid-column: 1;
+
+  }
+
+
+
+  nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  }
+
+  nav li{
+  display: inline-block;
+  margin: 40px;
+  align-content: center;
+
+  }
+
+  nav a{
+  color: #000000;
+  text-decoration: none;
+  text-transform:none;
+  font-size: 25px;
+
+  }
+
+  a:hover{
+    color: white;
+  }
+
+
+  /* .pic-style{
+    height: 500px;
+    width: 500px;
+
+  } */
+
+
+  .left-pic{
+  background: #822fed;
+  grid-column: 1;
+  }
+
+  .mid-pic{
+    background: #e62ca8;
+    grid-column: 1;
+
+  }
+
+  .right-pic{
+    background: #e3e62c;
+    grid-column: 1;
+  }
+
+
+  .TWO-left-pic{
+  background: #38ffeb;
+  grid-column: 1;
+
+  }
+
+  .TWO-mid-pic{
+    background: #4c38ff;
+  grid-column: 1;
+  }
+
+  .TWO-right-pic{
+    background: #8c009c;
+    grid-column: 1;
+
+  }
+
+}
+/*=====================================================================================*/
+/* Add Here styles for smaller laptops, larger tablets and small screens */
+@media only screen and (min-width: 769px) {
+}
+/*=====================================================================================*/
+/* Add Here styles for regular laptops and desktops */
+@media only screen and (min-width: 992px) {
+}
+/*=====================================================================================*/
+/* Add Here styles for xLarge monitors */
+@media only screen and (min-width: 1280px) {
+}
