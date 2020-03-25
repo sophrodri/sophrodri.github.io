@@ -1,0 +1,150 @@
+.main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(11, minmax(0, auto));
+  /* easiest thing to do is to do rows by 12 */
+  grid-template-rows: repeat(11, minmax(0, auto));
+  gap: 3px;
+}
+
+body, html {
+  height: 100% margin: 0;
+  padding: 0;
+}
+
+.logo {
+  /* background: #FFD0F9; */
+  grid-column: 1/2;
+  grid-row: 1/1;
+  display: inline-flex;
+  padding: 10px;
+}
+
+.logo-style {
+  height: 100px;
+  width: 100px;
+}
+
+.menu {
+  font-family: 'Raleway', sans-serif;
+  /* background: #FFD0F9; */
+  grid-column: 7/12;
+  grid-row: 1/1;
+  padding: 10px;
+  display: inline-flex;
+  margin-left: 400px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  align-content: right;
+  padding: 50px;
+}
+
+nav a {
+  color:#1122ff;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 30px;
+}
+
+a:hover {
+  color: white;
+}
+
+.hero {
+  position: relative;
+  background-image: url("../images/updatedhero.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 680px;
+  background-size: cover;
+  /* contain would fit it all. for sizes smaller. when you change it to contain you also have to change the height*/
+  background-position: center top;
+  grid-column: 1/12;
+  grid-row: 1/2;
+  margin-bottom: 50px;
+  position: relative;
+
+}
+
+.text-container {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  color: white;
+}
+
+.sec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 38px;
+  background: black;
+  height: 100%;
+  /* margin-top: 60px; */
+  padding: 0;
+
+}
+
+.pic-style {
+
+  height: 500px;
+  width: 500px;
+  display: inline-flex;
+}
+
+.left-pic {
+  background: #822fe4;
+  position: relative;
+  /* display: inline-block */
+}
+
+.left-pic:hover .overlay {
+  opacity: 1;
+}
+
+.mid-pic {
+  background: #e62ca8;
+  position: relative;
+}
+.mid-pic:hover .overlay {
+  opacity: 1;
+}
+.right-pic {
+  background: #e3e62c;
+  position: relative;
+  /* three pics should be contained in another grid. Display grid in the parent section. 3 columns of one section each */
+}
+.right-pic:hover .overlay {
+  opacity: 1;
+}
+.overlay-text{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  font-size: 90px;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 20;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #1122ff;}
+/* absolute vs relative for the text in the text boc. start always from the bottom:0
+20  */
+/*=====================================================================================*/
+/* Add Here styles for larger phones and tablets */
+@media only screen and (min-width: 480px) {
+  .main-wrapper {}
