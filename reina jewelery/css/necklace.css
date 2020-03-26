@@ -105,8 +105,10 @@ grid-row: 10/10;
   position: relative;
 }
 
+
+
 .pic-style:hover .overlay{
-  opacity: 1;
+  opacity:1;
 }
 
 .overlay-text{
