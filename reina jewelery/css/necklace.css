@@ -99,15 +99,14 @@ grid-row: 10/10;
 }
 
 .pic-style {
-  height: 500px;
-  width: 500px;
+  height: 100%;
+  width: 100%;
   display: inline-flex;
   position: relative;
 }
 
 
-
-.pic-style:hover .overlay{
+.grid-cell:hover .overlay{
   opacity:1;
 }
 
@@ -117,7 +116,6 @@ grid-row: 10/10;
   position: absolute;
   font-size: 20px;
 }
-
 
 .overlay {
   position: absolute;
