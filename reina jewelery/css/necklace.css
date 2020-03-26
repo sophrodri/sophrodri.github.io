@@ -13,19 +13,22 @@ body, html {
 
 
 header{
-background: skyblue;
+background-color: white;
 display: grid;
 grid-template-columns: 1fr 9fr;
 grid-template-rows: repeat(1, 1fr);
+grid-column: 1/12;
+grid-row: 1/2;
 }
 
 
 .logo {
   /* background: #FFD0F9; */
   grid-column: 1/2;
-  grid-row:
+  grid-row:1/1;
   display: inline-flex;
   padding: 30px;
+
 }
 
 .logo-style {
@@ -36,7 +39,7 @@ grid-template-rows: repeat(1, 1fr);
 .menu {
   font-family: 'Raleway', sans-serif;
   /* background: #FFD0F9; */
-  grid-column: 2/3;
+  grid-column: 1/3;
   grid-row: 1/1;
   padding: 10px;
   display: inline-flex;
@@ -67,8 +70,7 @@ a:hover {
 }
 
 .hero {
-  position: relative;
-  background-image: url("../images/updatedhero.jpg");
+  background-image: url("../images/necklacebanner.jpg");
   background-repeat: no-repeat;
   width: 100%;
   height:300px;
@@ -76,29 +78,24 @@ a:hover {
   /* contain would fit it all. for sizes smaller. when you change it to contain you also have to change the height*/
   background-position: center top;
   grid-column: 1/12;
-  grid-row: 1/2;
+  grid-row: 8/9;
   margin-bottom: 50px;
   position: relative;
 
 }
 
-.text-container {
-  position: absolute;
-  bottom: 0;
-  right: 20px;
-  color: white;
-}
 
 .sec-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-gap: 38px;
+  grid-gap: 40px;
   background: white;
   height: 100%;
   /* margin-top: 60px; */
   padding: 0;
-
+grid-column: 1/12;
+grid-row: 10/10;
 }
 
 .pic-style {
@@ -130,9 +127,197 @@ a:hover {
   opacity: 0;
   transition: .5s ease;
   background-color: #E3E3E3;}
-/* absolute vs relative for the text in the text boc. start always from the bottom:0
-20  */
-/*=====================================================================================*/
+
 /* Add Here styles for larger phones and tablets */
-@media only screen and (min-width: 480px) {
-  .main-wrapper {}
+/* IPAD PRO */
+/* IPHONE 6/7/8 */
+@media only screen and (min-width: 400px) {
+  header{
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: repeat(1, 1fr);
+  grid-column: 1/12;
+  grid-row: 1/2;
+  }
+
+
+  .logo {
+    /* background: #FFD0F9; */
+    padding: 10px;
+
+  }
+
+  .logo-style {
+    height: 100px;
+    width: 100px;
+  }
+
+  .menu {
+    padding: 5px;
+    margin-left: 155px;
+    margin-top: 40PX;
+  }
+
+  nav li {
+    display: inline-block;
+    align-content: right;
+    padding: 30PX;  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  .hero {
+    width: 100%;
+    height:100px;
+    background-size: contain;
+    margin-bottom: 20px;
+  }
+
+  .sec-grid {
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 40px;
+    height: 100%;
+  }
+
+  .pic-style {
+    height:700px;
+    width: 700px;
+    position: relative;
+  }
+}
+
+@media only screen and (mid-width: 670px;){
+  .menu {
+    margin-left: 100px;
+
+  }
+
+  nav li {
+    display: inline-block;
+    align-content: right;
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+
+
+
+}
+
+@media only screen and (min-width: 750px) {
+
+
+
+  .logo-style {
+    height: 100px;
+    width: 100px;
+  }
+
+  .menu {
+    margin-left: 200px;
+
+  }
+
+  nav li {
+    display: inline-block;
+    align-content: right;
+    padding: 30px;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  .hero {
+    height:200px;
+    background-size: contain;
+    margin-bottom: 20px;
+  }
+
+  .sec-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+    height: 100%;
+  }
+
+  .pic-style {
+    height: 405px;
+    width: 405px;
+    display: inline-flex;
+    position: relative;
+  }
+
+
+}
+
+
+@media only screen and (min-width: 1110px) {
+
+
+
+
+  .logo {
+    /* background: #FFD0F9; */
+    padding: 30px;
+
+  }
+
+  .logo-style {
+    height: 200px;
+    width: 200px;
+  }
+
+  .menu {
+    font-family: 'Raleway', sans-serif;
+    /* background: #FFD0F9; */
+    grid-column: 1/12;
+    grid-row: 1/1;
+    padding: 10px;
+    display: inline-flex;
+    margin-left: 450px;
+  }
+
+
+
+  nav a {
+    font-size: 30px;
+  }
+
+
+
+  .hero {
+
+    width: 100%;
+    height:200px;
+    margin-bottom: 100px;
+    background-size: cover;
+    /* contain would fit it all. for sizes smaller. when you change it to contain you also have to change the height*/
+
+  }
+
+
+  .sec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 30px;
+    background: white;
+    height: 100%;
+    /* margin-top: 60px; */
+    padding: 0;
+  grid-column: 1/12;
+  grid-row: 10/10;
+  }
+
+  .pic-style {
+    height: 450px;
+    width: 450px;
+  }
+}
