@@ -11,6 +11,15 @@ body, html {
   padding: 0;
 }
 
+.header-out{
+background-color: white;
+display: grid;
+grid-template-columns: 1fr 9fr;
+grid-template-rows: repeat(1, 1fr);
+grid-column: 1/12;
+grid-row: 1/2;
+}
+
 .logo {
   /* background: #FFD0F9; */
   grid-column: 1/2;
@@ -57,7 +66,7 @@ a:hover {
   color: white;
 }
 
-.hero {
+.hero{
   position: relative;
   background-image: url("../images/updatedhero.jpg");
   background-repeat: no-repeat;
@@ -71,6 +80,40 @@ a:hover {
   margin-bottom: 50px;
   position: relative;
 
+}
+
+.hero-necklace{
+  background-image: url("../images/necklacebanner.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height:400px;
+  background-size: cover;
+  /* contain would fit it all. for sizes smaller. when you change it to contain you also have to change the height*/
+  background-position: center top;
+  grid-column: 1/12;
+  grid-row: 8/9;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.sec-grid-out {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 40px;
+  background: white;
+  height: 100%;
+  /* margin-top: 60px; */
+  padding: 0;
+grid-column: 2/12;
+grid-row: 10/10;
+}
+
+.grid-cell{
+  position: relative;
+}
+.grid-cell:hover .overlay{
+  opacity: 1;
 }
 
 .text-container {
@@ -92,11 +135,18 @@ a:hover {
 }
 
 .pic-style {
-
   height: 500px;
   width: 500px;
   display: inline-flex;
 }
+
+.pic-style-gallery {
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  position: relative;
+}
+
 
 .left-pic {
   background: #822fe4;
@@ -104,7 +154,7 @@ a:hover {
   /* display: inline-block */
 }
 
-.left-pic:hover .overlay {
+.left-pic:hover .overlay-home {
   opacity: 1;
 }
 
@@ -112,7 +162,7 @@ a:hover {
   background: #e62ca8;
   position: relative;
 }
-.mid-pic:hover .overlay {
+.mid-pic:hover .overlay-home {
   opacity: 1;
 }
 .right-pic {
@@ -120,18 +170,17 @@ a:hover {
   position: relative;
   /* three pics should be contained in another grid. Display grid in the parent section. 3 columns of one section each */
 }
-.right-pic:hover .overlay {
+.right-pic:hover .overlay-home {
   opacity: 1;
 }
-.overlay-text{
+.overlay-text-home{
   color: white;
   font-family: 'Raleway', sans-serif;
   position: absolute;
   font-size: 90px;
 }
 
-
-.overlay {
+.overlay-home {
   position: absolute;
   top: 20;
   bottom: 0;
@@ -142,6 +191,36 @@ a:hover {
   opacity: 0;
   transition: .5s ease;
   background-color: #1122ff;}
+
+.overlay-text-gallery{
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  font-size: 20px;
+}
+
+.overlay-gallery {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #E3E3E3;}
+
+
+footer{
+      background-color: blue;
+      background-position: cover;
+      display: grid;
+      grid-template-columns: 1fr 9fr;
+      grid-template-rows: repeat(1, 1fr);
+      grid-column: 1/12;
+      grid-row: 12/12;}
+
+
 /* absolute vs relative for the text in the text boc. start always from the bottom:0
 20  */
 /*=====================================================================================*/
