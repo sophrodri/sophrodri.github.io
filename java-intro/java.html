@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>J-Query Demo</title>
+    <link rel="stylesheet" href="/css/testing.css">
+  </head>
+  <style media="screen">
+    .dynamicClass{
+      font-size:30px;
+    }
+  </style>
+  <body>
+    <h1>DOM Test</h1>
+
+    <p>Come check out this page with no information whatsoever</p>
+    <p class="text-demo">This is demo text</p>
+    <p class="text-demo1">what's upppp</p>
+    <p id="testID">Lemme see yo ID</p>
+
+<!--Jquery file here-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jscript/jquery-3.4.1.min.js"></script>
+    <script>
+
+    $(document).ready(function(){
+      // ^ tells script not to run until document has finished loading 
+    $(".text-demo1").html("I'm using JQuery now");
+    $(".text-demo1").css("color", "red");
+    $(".text-demo").addClass("dynamicClass");
+    // $ access to JQuery
+    // (selector) selects elemend in DOM
+
+  });
+
+    </script>
+
+  </body>
+</html>
