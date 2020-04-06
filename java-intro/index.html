@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>J-Query Demo</title>
+    <link rel="stylesheet" href="/css/testing.css">
+  </head>
+  <style media="screen">
+    .dynamicClass{
+      font-size:30px;
+    }
+
+    #testId{
+      background: lightblue;
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+  </style>
+  <body>
+    <h1>DOM Test</h1>
+
+    <p>Come check out this page with no information whatsoever</p>
+    <p class="text-demo">This is demo text</p>
+    <p class="text-demo1">what's upppp</p>
+
+    <button type="button" name="button">Button</button>
+    <div id="testId"><p>This is a test</p></div>
+<p class="demo">My Name is</p>
+
+
+
+<!--Jquery file here-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jscript/jquery-3.4.1.min.js"></script>
+    <script>
+
+  $(document).ready(function(){
+      // ^ tells script not to run until document has finished loading
+    $(".text-demo1").html("I'm using JQuery now");
+    $(".text-demo1").css({"color": "red", "font-size": 20});
+    $(".text-demo").addClass("dynamicClass");
+    // $ access to JQuery
+    // (selector) selects elemend in DOM
+    //.action = action you want to perform.
+
+    $("#testId").hover(function(){
+          $("testId").css("color", "red");
+        },
+        function(){
+          $("#testId").css("color", "black");
+    };// end of HOVER
+
+$("button").click(function(){
+// $("#testId").hide();
+// $("#testId").toggle(1000);
+// $("#testId").fadeOut(1000);
+// $("#testId").slideUp("slow");
+  $("#testId").slideToggle("fast");
+// $("#testId").width("300px");
+// $("#testId").height("300px");
+});//end of BUTTON
+
+
+
+$("button").click(function(){
+  $(".demo").remove(" Sophia ");
+// prepend = before (adds content to the begining or end of document)
+// append = after
+// before, after (adds it before the element)
+});//end of BUTTON
+
+
+$("button").click(function(){
+  $("#testId").animate({left: '250px', opacity: '0.5', height:"300px"});
+// prepend = before (adds content to the begining or end of document)
+// append = after
+// before, after (adds it before the element)
+});//end of BUTTON
+
+
+
+
+}); // document ready end
+
+
+
+    </script>
+
+  </body>
+</html>

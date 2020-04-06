@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>crepe reciple</title>
+  <link rel="stylesheet" href="/css/howto.css">
+
+
+  </head>
+  <body>
+<main>
+  <header>
+    <div class="">
+      <h1>Easy <span>5</span>minute <br> crepe reciple</h1>  </div>
+  </header>
+  <div class="servings"> for 7-8  </div>
+  <section class="intro">
+    lala
+<!-- place the images and text into their respective sections -->
+<button type="step1" name="button">start</button>
+  </section>
+
+  <section class="ingredients hide">
+    <!-- apply hide class to allow button to show  -->
+<button type="step2" name="button">next</button>
+  </section>
+
+  <section class="mix hide">
+<button type="step3" name="button">next</button>
+  </section>
+
+  <section class="cook hide">
+<button type="step4" name="button">next</button>
+  </section>
+
+  <section class="serve hide">
+<button type="step5" name="button">finish</button>
+  </section>
+
+</main>
+
+ <!-- Jquery FILE HERE -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+$ (document).ready(function(){
+
+// STEP1
+$ (".step1").click(function(){
+  $(".intro").hide(1000);
+  $(".ingredients").show(1000);
+});// end of STEP1
+
+
+//STEP2
+$ (".step2").click(function(){
+  $(".ingredients").slideUp();
+  $(".mix").slideDown();
+}); // end of STEP2
+$(".ing").on({
+  mouseenter: function(){
+    $(".ingredients img").fadeIn(1000);
+  },
+  mouseleave: function(){
+    $(".ingredients img").fadeOut(1000);
+  }
+});// end of STEP2
+
+//STEP 3
+$(".step3").click(function(){
+  $(".mix").remove();
+  $(".cook").css("display", "block");
+});// end of step3
+
+//STEP 4
+$(".step4").click(function(){
+  $(".cook").slideUp("slow");
+  $(".serve").show(1000);
+  $(".serve").append("<p class ='final'>Enjoy!</p>")
+});
+//before/after= outside the section
+//prepend/append= top of the contents within the section
+
+// end of Scripts
+});
+
+
+
+
+
+</script>
+
+
+
+
+  </body>
+</html>
