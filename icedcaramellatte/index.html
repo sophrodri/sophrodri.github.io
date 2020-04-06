@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Caramel Latte Recipe</title>
+  <link rel="stylesheet" href="/css/icedcaramel.css">
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Raleway:400,500&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+<main>
+  <header>
+<div class="header">
+  <h1>Easy 5 Step Iced Caramel Latte</h1>
+</div>
+  </header>
+
+
+
+</main>
+
+ <!-- Jquery FILE HERE -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+$ (document).ready(function(){
+
+// STEP1
+$ (".step1").click(function(){
+  $(".intro").hide(1000);
+  $(".ingredients").show(1000);
+});// end of STEP1
+
+
+//STEP2
+$ (".step2").click(function(){
+  $(".ingredients").slideUp();
+  $(".mix").slideDown();
+}); // end of STEP2
+$(".ing").on({
+  mouseenter: function(){
+    $(".ingredients img").fadeIn(1000);
+  },
+  mouseleave: function(){
+    $(".ingredients img").fadeOut(1000);
+  }
+});// end of STEP2
+
+//STEP 3
+$(".step3").click(function(){
+  $(".mix").remove();
+  $(".cook").css("display", "block");
+});// end of step3
+
+//STEP 4
+$(".step4").click(function(){
+  $(".cook").slideUp("slow");
+  $(".serve").show(1000);
+  $(".serve").append("<p class ='final'>Enjoy!</p>")
+});
+//before/after= outside the section
+//prepend/append= top of the contents within the section
+
+// end of Scripts
+});
+
+
+
+
+
+</script>
+
+
+
+
+  </body>
+</html>

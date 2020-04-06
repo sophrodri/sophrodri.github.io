@@ -1,0 +1,45 @@
+
+.main-wrapper{
+    display: grid;
+    grid-template-columns: repeat(11, minmax(0, auto));
+    /* easiest thing to do is to do rows by 12 */
+    grid-template-rows: repeat(11, minmax(0, auto));
+    gap: 3px;
+}
+
+
+.hide{
+  display: none;
+}
+
+body{
+  background-color: #fbf4e1;
+font-family: 'Raleway', sans-serif;
+}
+
+
+h1{
+  font-family: 'Berkshire Swash', cursive;
+  color:#af633c;
+  font-size:2.2rem;
+  letter-spacing: 0.1rem;
+  line-height: 3rem;
+  margin-top: 0;
+}
+
+h2{
+
+weight: 500;
+}
+
+p{
+font-size: 12px;
+weight: 400;
+}
+
+
+.header{
+  background: blue;
+  grid-column: 1/11;
+  grid-row: 1/2;
+}
