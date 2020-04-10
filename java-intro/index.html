@@ -32,58 +32,43 @@
 
 <!--Jquery file here-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="jscript/jquery-3.4.1.min.js"></script>
-    <script>
+    <script type="text/javascript">
 
-  $(document).ready(function(){
-      // ^ tells script not to run until document has finished loading
-    $(".text-demo1").html("I'm using JQuery now");
-    $(".text-demo1").css({"color": "red", "font-size": 20});
-    $(".text-demo").addClass("dynamicClass");
-    // $ access to JQuery
-    // (selector) selects elemend in DOM
-    //.action = action you want to perform.
-
-    $("#testId").hover(function(){
-          $("testId").css("color", "red");
-        },
-        function(){
-          $("#testId").css("color", "black");
-    };// end of HOVER
-
-$("button").click(function(){
-// $("#testId").hide();
-// $("#testId").toggle(1000);
-// $("#testId").fadeOut(1000);
-// $("#testId").slideUp("slow");
-  $("#testId").slideToggle("fast");
-// $("#testId").width("300px");
-// $("#testId").height("300px");
-});//end of BUTTON
-
-
-
-$("button").click(function(){
-  $(".demo").remove(" Sophia ");
-// prepend = before (adds content to the begining or end of document)
-// append = after
-// before, after (adds it before the element)
-});//end of BUTTON
-
-
-$("button").click(function(){
-  $("#testId").animate({left: '250px', opacity: '0.5', height:"300px"});
-// prepend = before (adds content to the begining or end of document)
-// append = after
-// before, after (adds it before the element)
-});//end of BUTTON
-
-
-
-
-}); // document ready end
-
-
+    // $(document).ready(function(){
+    //   // Step One
+    //   $(".step1").click(function(){
+    //     $(".intro").hide(1000);
+    //     $(".ingredients").show(1000);
+    //     $
+    //   });
+    //   // Step Two
+    //   $(".step2").click(function(){
+    //     $(".ingredients").slideUp();
+    //     $(".mix").slideDown();
+    //   });
+    //     $("p.ing").on({
+    //       mouseenter: function(){
+    //         $(".ingredients img").fadeIn(1000);
+    //       },
+    //         mouseleave: function(){
+    //           $(".ingredients img").fadeOut(1000);
+    //         }
+    //     });
+    //     // Step three
+    //     $(".step3").click(function(){
+    //       $(".mix").remove();
+    //       $(".cook").css("display", "block");
+    //     });
+    //     // Step four
+    //     $(".step4").click(function(){
+    //       $(".cook").slideUp("slow");
+    //       $(".serve").show();
+    //       $(".serve").append("<p class='final'>Enjoy!</p>");
+    //
+    //     });
+    //
+    //
+    // });
 
     </script>
 
