@@ -33,7 +33,7 @@
 
 
 
-      <section class="intro">
+      <section class="intro hide">
         <div class="grid-sec">
 
 
@@ -51,14 +51,25 @@
             <p>Vegan - adjustment of diary </p>
           </div>
 
+
           <div class="intro-pic">
             <img src="images/intro-pic.jpg" alt="" class="pic-style">
           </div>
 
+                    <div class="intro-pic2">
+                      <img src="images/intro-pic.jpg" alt="" class="pic-style">
+                    </div>
+
+                    <div class="intro-pic3">
+                      <img src="images/intro-pic.jpg" alt="" class="pic-style">
+                    </div>
+
           <div class="intro-text">
             <h2> If you’re a major money manager or a broke college student, you can enjoy a good iced latte without breaking your bank. </h2>
-            <button class="button step0" type="button" name="start">Next: Ingredients</button>
+          </div>
 
+          <div class="button-pos">
+            <button class="step1" type="button" name="start">Next: Ingredients</button>
           </div>
         </div>
       </section>
@@ -67,7 +78,7 @@
 
 
 
-      <section class="get-ingredients">
+      <section class="get-ingredients hide">
         <div class="grid-sec">
 
 
@@ -88,7 +99,7 @@
             </ul>
           </div>
           <div class="button-pos">
-            <button class="button step0" type="button" name="Next">Next: Step 1</button>
+            <button class="step2" type="button" name="Next">Next: Step 1</button>
           </div>
         </div>
       </section>
@@ -98,7 +109,7 @@
 
 
 
-      <section class="step1">
+      <section class="step1-sec hide">
         <div class="grid-sec">
 
 
@@ -113,7 +124,7 @@
           </div>
 
           <div class="button-pos">
-            <button class="button step1" type="button" name="Next">Next: Step 2</button>
+            <button class="step3" type="button" name="Next">Next: Step 2</button>
           </div>
         </div>
       </section>
@@ -122,7 +133,7 @@
 
 
 
-      <section class="step2">
+      <section class="step2-sec hide">
         <div class="grid-sec">
 
 
@@ -137,30 +148,41 @@
           </div>
 
           <div class="button-pos">
-            <button class="button step2" type="button" name="Next">Next: Step 3</button>
+            <button class="step4" type="button" name="Next">Next: Step 3</button>
           </div>
         </div>
       </section>
 
 
-      <section class="step3">
+      <section class="step3-sec hide">
         <div class="grid-sec">
           <h2 class="steps-title">Step 3: Cold Brew </h2>
+
           <div class="steps-pic">
-            <img src="images/step3.jpg" alt="" class="pic-style">
+            <img id="hoverimg"
+            src="images/step2.jpg" alt="" class="pic-style">
+
+            <img src="images/step3.jpg" alt="" class="pic-style hide" id="popup">
+
+
           </div>
+
+          <button id="brew" type="button" name="Next">Hover to Pour</button>
+
           <div class="steps-text">
             <p>Pour your cold brew up to where the ice ends in your cup. </p>
           </div>
 
           <div class="button-pos">
-            <button class="button step3" type="button" name="Next">Next: Step 4</button>
+            <button class="step5" type="button" name="Next">Next: Step 4</button>
           </div>
+
+
         </div>
       </section>
 
 
-      <section class="step4">
+      <section class="step4-sec hide">
         <div class="grid-sec">
           <h2 class="steps-title">Step 4: Pouring the Milk</h2>
           <div class="steps-pic">
@@ -171,13 +193,13 @@
           </div>
 
           <div class="button-pos">
-            <button class="button step4" type="button" name="Next">Next: Step 5</button>
+            <button class="step6" type="button" name="Next">Next: Step 5</button>
           </div>
         </div>
       </section>
 
 
-      <section class="step5">
+      <section class="step5-sec hide">
         <div class="grid-sec">
 
 
@@ -191,19 +213,31 @@
 
 
           <div class="button-pos">
-            <button class="button step5" type="button" name="Next">Finish</button>
+            <button class="step7" type="button" name="Next">Finish</button>
           </div>
         </div>
       </section>
 
-
       <section class="thank-you hide">
-        <h2>You're Done! Enjoy your latte!</h2>
-        <img src="images/finish.jpg" alt="" class="pic-style ing">
-        <p> For more recipes, go to sophiecookbook.com! </p>
+        <div class="grid-sec">
+
+          <h2 class="steps-title" id="thankyou">Presto! You're an official Starbucks Barista!</h2>
+
+
+        </div>
       </section>
 
-      <footer>
+
+      <footer class="sec-grid">
+        <h2>Eat. Live. Love.</h2>
+        <p>For more recipes, pkease visit www.sophiesweets.com</p>
+        <nav>
+          <ul>
+            <li><a href="#">about me</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">socials</a></li>
+          </ul>
+        </nav>
 
 
       </footer>
@@ -211,15 +245,88 @@
   </div>
   <!-- Jquery FILE HERE -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script>
+  <script type="text/javascript">
     $(document).ready(function() {
-      alert("hello");
+
+// INTRO -> INGREDIENTS
+      $(".step1").click(function() {
+        $(".intro").hide(1000);
+        $(".get-ingredients").show(1000);
+      });
+
+// INGREDIENTS -> STEP 1
+      $(".step2").click(function() {
+        $(".get-ingredients").hide(1000);
+        $(".step1-sec").show(1000);
+      });
+
+// STEP 1 -> STEP 2
+      $(".step3").click(function() {
+        $(".step1-sec").hide(1000);
+        $(".step2-sec").show(1000);
+      });
+
+// STEP 2 -> STEP 3
+      $(".step4").click(function() {
+        $(".step2-sec").hide(1000);
+        $(".step3-sec").show(1000);
+      });
+
+
+
+// STEP 3 -> STEP 4
+      $(".step5").click(function() {
+        $(".step3-sec").hide(1000);
+        $(".step4-sec").show(1000);
+      });
+
+
+
+$("#brew").mouseover(function(){
+  $("#hoverimg").hide(300);
+  $("#popup").show(300);
+  alert();
+});
+  $("#brew").mouseleave(function(){
+  $("#popup").hide(300);
+  $("#hoverimg").show(300);
+
+  });
+      // $("#brew").mouseover(function(){
+      //         mouseenter: function(){
+      //           $("#popup").show(500);
+      //         },
+      //           mouseleave: function(){
+      //             $("#hoverimg").fadeIn(500);
+      //           }
+      //       });
+
+
+          //  STEP 4 -> STEP 5
+                  $(".step6").click(function() {
+                 $(".step4-sec").hide(1000);
+                $(".step5-sec").show(1000);
+                });
+
+
+
+          //  STEP 5 -> OUTRO
+      $(".step7").click(function() {
+       $(".step5-sec").hide(1000);
+   $(".thank-you").show(1000);
+       });
+
+
+
+// end of script
+            });
+          </script>
 
 
 
 
-    });
-  </script>
+
+
 
 </body>
 
