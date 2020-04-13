@@ -8,6 +8,7 @@
   <meta charset="utf-8">
   <title>Caramel Latte Recipe</title>
   <link rel="stylesheet" href="css/icedcaramel.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -157,20 +158,19 @@
       <section class="step3-sec hide">
         <div class="grid-sec">
           <h2 class="steps-title">Step 3: Cold Brew </h2>
-
+<button id="brew" type="button" name="Next">Click to Pour</button>
           <div class="steps-pic">
             <img id="hoverimg"
             src="images/step2.jpg" alt="" class="pic-style">
 
             <img src="images/step3.jpg" alt="" class="pic-style hide" id="popup">
 
-
           </div>
 
-          <button id="brew" type="button" name="Next">Hover to Pour</button>
 
-          <div class="steps-text">
-            <p>Pour your cold brew up to where the ice ends in your cup. </p>
+
+          <div class="steps-text" id="step3-box">
+            <p id="step3text">Pour your cold brew up to where the ice ends in your cup. </p>
           </div>
 
           <div class="button-pos">
@@ -205,7 +205,7 @@
 
           <h2 class="steps-title">Step 5: Add more Caramel and Stir!</h2>
           <div class="steps-pic">
-            <img src="images/drizzle.jpg" alt="" class="pic-style ing">
+            <img src="images/drizzle.jpg" alt="" class="pic-style">
           </div>
           <div class="steps-text">
             <p> Take a sip and see if you want to add more caramel. And Presto! </p>
@@ -221,7 +221,12 @@
       <section class="thank-you hide">
         <div class="grid-sec">
 
-          <h2 class="steps-title" id="thankyou">Presto! You're an official Starbucks Barista!</h2>
+          <h2 class="steps-title" id="thankyou">Enjoy your coffee!</h2>
+
+
+          <div class="final-pic">
+            <img src="images/intro-pic.jpg" alt="" class="pic-style">
+          </div>
 
 
         </div>
@@ -283,13 +288,13 @@
 
 
 $("#brew").mouseover(function(){
-  $("#hoverimg").hide(300);
-  $("#popup").show(300);
-  alert();
+  $("#hoverimg").fadeOut(3000);
+  $("#popup").fadeIn(3000);
 });
+
   $("#brew").mouseleave(function(){
-  $("#popup").hide(300);
-  $("#hoverimg").show(300);
+  $("#popup").fadeOut(3000);
+  $("#hoverimg").fadeIn(3000);
 
   });
       // $("#brew").mouseover(function(){
@@ -314,6 +319,11 @@ $("#brew").mouseover(function(){
       $(".step7").click(function() {
        $(".step5-sec").hide(1000);
    $(".thank-you").show(1000);
+    $(".final-pic").prepend('<h1 class="steps-title"> Presto!</h2>')
+    $(".final-pic").css('grid-column', "3/4");;
+    $("#thankyou").css("background-color", "blue");
+
+
        });
 
 
