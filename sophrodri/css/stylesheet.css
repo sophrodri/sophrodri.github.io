@@ -65,15 +65,14 @@ grid-row: 1/2;
 margin: 50px;
 }
 
+
 h2{
 font-family: 'Oswald', sans-serif;
 font-weight: bold;
 
 }
 
-nav h2{
-  font-size: 35px;
-}
+
 
 h3{
 font-family: 'Oswald', sans-serif;
@@ -270,12 +269,53 @@ grid-row: 5/5;
 display: inline;
 }
 
+.work-gallery h1{
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+
+}
+
 .work-gallery{
   display: grid;
-  grid-column: 1/10;
+  grid-column: 1/11;
   grid-row: 2/11;
   grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 }
+
+.gallery-cell{
+
+}
+
+.grid-cell:hover .overlay-gallery {
+  opacity: 1;
+}
+
+/* .overlay-gallery {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 60;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #E3E3E3;
+  grid-column: 7/7;
+  grid-row: 7/7;
+} */
+
+.gallery-style {
+  width: 75%;
+  display: inline-flex;
+  position: relative;
+}
+
+.gallery-text{
+  padding: 100px;
+}
+
+
 
 
 .resume-pg{
