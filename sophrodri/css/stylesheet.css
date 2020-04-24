@@ -1,8 +1,8 @@
 .main-wrapper{
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(11, minmax(0, auto));
   /* easiest thing to do is to do rows by 12 */
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: repeat(7, minmax(0,auto));
 }
 
 .hide {
@@ -14,10 +14,28 @@
   grid-template-columns: repeat(11, 1fr);
   grid-template-rows: repeat(11, 1fr);
   height: 1080px;
-  width: 1920px;
+  width: 100%;
   background-color: #f19824; /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, #f19824 , #fa55ac); /* Standard syntax (must be last) */
   background-size: cover;
+  /* contain would fit it all. for sizes smaller. when you change it to contain you also have to change the height*/
+  background-position: center top;
+  grid-column: 1/12;
+  grid-row: 1/2;
+  position: relative;
+}
+
+.work-home {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  height: 1080px;
+  width: 1920px;
+  background: blue;
+  background-size: cover;
+  /* background-color: #f19824;
+  background-image: linear-gradient(to right, #f19824 , #fa55ac);
+
   /* contain would fit it all. for sizes smaller. when you change it to contain you also have to change the height*/
   background-position: center top;
   grid-column: 1/12;
@@ -69,6 +87,7 @@ margin: 50px;
 h2{
 font-family: 'Oswald', sans-serif;
 font-weight: bold;
+font-size: 30px
 
 }
 
@@ -80,6 +99,7 @@ font-family: 'Oswald', sans-serif;
 
 p{
   font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
 }
 
 
@@ -247,9 +267,10 @@ width: 120%;
 .work-pg{
   grid-column: 1/12;
   grid-row: 3/4;
-  background: yellow;
+  background: none;
   height: 1080px;
   width: 1920px;
+
 }
 
 .grad-banner h1{
@@ -306,7 +327,7 @@ display: inline;
 } */
 
 .gallery-style {
-  width: 75%;
+  width: 55%;
   display: inline-flex;
   position: relative;
 }
@@ -326,6 +347,15 @@ display: inline;
   width: 1920px;
 }
 
+.resume-pos{
+  grid-column: 6/6;
+  grid-row: 4/5;
+}
+
+.resume-style{
+
+
+}
 
 .contact-pg{
   grid-column: 1/12;
