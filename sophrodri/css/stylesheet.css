@@ -434,16 +434,44 @@ background: black;
 
 
 /* WORK PAGES */
+
+
+.subpage-head{
+  grid-column: 1/1;
+  position: fixed;
+}
+
+
 .pics{
-  grid-row: 3/10;
+  grid-row: 2/5;
   grid-column: 1/10;
 }
 
-.page-pics{
+
+.project-text{
+  grid-column: 3/4;
+  grid-row: 1/2;
+padding: 90px;
+}
+
+
+.project-text h1{
+  color: #fa55ac;
+  line-height: .75;
+}
+
+.pic-gallery{
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, auto));
+  grid-template-rows: repeat(6, minmax(0,auto));
+}
+
+.pic-cell{
   background: pink;
-  grid-column: 1/10;
-
+  position: relative;
 }
+
 .work-pics{
-  width:105%
+  width:100%;
+  position: relative;
 }
