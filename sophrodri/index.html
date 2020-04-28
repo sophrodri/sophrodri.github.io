@@ -72,9 +72,11 @@
       <section class="aboutme">
 
         <div class="about-title">
-          <h1>I am:</h1>
+          <h1>I am  <span id="changingword">sophie rodriguez</span> </h1>
 
-          <div class="title-switch">
+
+
+          <!-- <div class="title-switch">
             <h1>sophie rodriguez</h1>
 
             <div class="title-switch1 hide">
@@ -88,7 +90,7 @@
             <div class="title-switch3 hide">
               <h1>gradient gal</h1>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <div class="aboutme-summary">
@@ -100,7 +102,7 @@
 
 
         <div class="profile">
-          <img src="images/profile1.jpg" alt="" class="prof-pic">
+          <img src="images/profile1.png" alt="" class="prof-pic" id="img">
         </div>
 
       </section>
@@ -294,6 +296,63 @@
         console.log('Live reload enabled.');
       })();
     }
+
+
+    $(document).ready(function(){
+
+
+    (function(){
+      var words = [
+          'a designer',
+          'a fashion lover',
+          'a insta baddie',
+          'sophrodri',
+
+          ], i = 0;
+      setInterval(function(){
+          $('#changingword').fadeOut(function(){
+              $(this).html(words[i=(i+1)%words.length]).fadeIn();
+          });
+      }, 1500);
+
+      var images = ["profile2.png"];
+    $(function () {
+        var i = 0;
+        $("#img").css("background-image", "url(images/" + images[i] + ")");
+        setInterval(function () {
+            i++;
+            if (i == images.length) {
+                i = 0;
+            }
+            $("#dvImage").fadeOut("slow", function () {
+                $(this).css("background-image", "url(images/" + images[i] + ")");
+                $(this).fadeIn("slow");
+            });
+        }, 5000);
+    });
+
+
+
+
+
+
+  })();
+
+
+
+
+
+
+
+
+
+
+
+
+    });
+
+
+
     // ]]>
   </script>
 </body>

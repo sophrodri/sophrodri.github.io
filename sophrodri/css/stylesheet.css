@@ -221,45 +221,32 @@ grid-row: 6/7;
   grid-row: 3/7;
 }
 
-.about-Iam{
-  grid-column: 1/2;
-  grid-row:1/1;
-  display: inline-flex;
-  font-family: amador, sans-serif;
-  font-weight: 400;
-  font-size: 50pt;
-  font-style: normal;
-  padding-left: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  line-height: 0pt;
-}
 
 .about-title h1{
   font-size: 9vw;
-  color:  #fa55ac;
+  color:  black;
 }
 
 
 .about-title{
   grid-column: 1/7;
   grid-row:1/1;
-
+margin-left: 5px;
   font-family: amador, sans-serif;
 
   font-weight: 400;
   font-style: normal;
-margin: 0;
+
 display: inline-flex;
 }
 
-.title-switch{
-  grid-column: 4/7;
-  grid-row: 1/2;
-  /* text-decoration: underline; */
-  display: inline-grid;
-  margin-left: 5px;
+
+#changingword {
+  color: #fa55ac;
+margin-left: 5px;
+
 }
+
 
 .profile{
   grid-column: 1/4;
@@ -272,6 +259,7 @@ width: 200%;
 margin: 5px;
 
 }
+
 
 .work-pg{
   grid-column: 1/12;
@@ -479,6 +467,7 @@ padding: 90px;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, auto));
   grid-template-rows: repeat(6, minmax(0,auto));
+
 }
 
 .pic-cell{
