@@ -36,7 +36,9 @@
     <section class="home grid-sec">
       <header>
         <div class="logo">
-<a href="index.html">  <img src="images/logo.png" alt="" id="logo-style"></a></div>
+<a href="index.html">  <img src="images/logo.png" alt="" id="logo-style"></a>
+<img src="" alt="" class="logo-default">
+</div>
 
         <nav class="menu">
           <div class="menu-container">
@@ -59,7 +61,7 @@
 
 
       <div class="open-letters">
-        <h1>welcome</h1>
+        <h1>hello lovlies</h1>
       </div>
     </section>
 
@@ -247,10 +249,25 @@
 
     <section class="contact-pg grid-sec" id="contact">
 
+      <div id="mainform">
+    <!-- Required Div Starts Here -->
+    <form id="form">
+    <h1>Contact</h1>
+    <p id="returnmessage"></p>
+    <label>Name: <span>*</span></label>
+    <input type="text" id="name" placeholder="Name"/>
+    <label>Email: <span>*</span></label>
+    <input type="text" id="email" placeholder="Email"/>
 
-      <footer class="grad-footer">
+    <label>Message:</label>
+    <textarea id="message" placeholder="Message......."></textarea>
+    <input type="button" id="submit" value="Send Message"/>
+    </form>
+    </div>
 
-      </footer>
+    <footer class="grad-footer">
+
+    </footer>
     </section>
 
   </main>
@@ -305,7 +322,7 @@
       var words = [
           'a designer',
           'a fashion lover',
-          'a insta baddie',
+          'gradient girl',
           'sophrodri',
 
           ], i = 0;
@@ -315,40 +332,68 @@
           });
       }, 1500);
 
-      var images = ["profile2.png"];
-    $(function () {
-        var i = 0;
-        $("#img").css("background-image", "url(images/" + images[i] + ")");
-        setInterval(function () {
-            i++;
-            if (i == images.length) {
-                i = 0;
-            }
-            $("#dvImage").fadeOut("slow", function () {
-                $(this).css("background-image", "url(images/" + images[i] + ")");
-                $(this).fadeIn("slow");
-            });
-        }, 5000);
-    });
-
-
-
-
-
-
   })();
 
+  // //Get the button
+  // var mybutton = document.getElementById("myBtn");
+  //
+  // // When the user scrolls down 20px from the top of the document, show the button
+  // window.onscroll = function() {scrollFunction()};
+  //
+  // function scrollFunction() {
+  //   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  //     mybutton.style.display = "block";
+  //   } else {
+  //     mybutton.style.display = "none";
+  //   }
+  // }
+  //
+  // // When the user clicks on the button, scroll to the top of the document
+  // function topFunction() {
+  //   document.body.scrollTop = 0;
+  //   document.documentElement.scrollTop = 0;
+  // }
+
+  $("#submit").click(function() {
+  var name = $("#name").val();
+  var email = $("#email").val();
+  var message = $("#message").val();
+  var contact = $("#contact").val();
+  $("#returnmessage").empty(); // To empty previous error/success message.
+  // Checking for blank fields.
+  if (name == '' || email == '' || contact == '') {
+  alert("Please Fill Required Fields");
+  } else {
+  // Returns successful data submission message when the entered information is stored in database.
+  $.post("contact_form.php", {
+  name1: name,
+  email1: email,
+  message1: message,
+  contact1: contact
+  }, function(data) {
+  $("#returnmessage").append(data); // Append returned message to message paragraph.
+  if (data == "Your Query has been received, We will contact you soon.") {
+  $("#form")[0].reset(); // To reset form fields on success.
+  }
+  });
+  }
+  });
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 0) {
+      $('.logo').hide();
+      $('.logo-default').show();
+    // } else {
+    //   $('.logo').show();
+    //   $('.logo-default').hide();
+    // }
+  });
 
 
 
 
 
-
-
-
-
-
-
+// end of doc ready
     });
 
 
