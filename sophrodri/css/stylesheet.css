@@ -1,5 +1,7 @@
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 body{
   margin: 0;
@@ -153,7 +155,7 @@ margin: 0;
 grid-column: 11/11;
 position: fixed;
 /* only if you want it to stay here */
-right: 2%;
+right: 1.5%;
 z-index: 9;
 
 
@@ -658,7 +660,7 @@ font-size: 25vw;
 @media only screen and (min-width: 1024px) {
 
   .home{
-  height: 800px;}
+  height: 1000px;}
 
 .open-letters{
   grid-row: 2/5;
@@ -719,6 +721,84 @@ font-size:  20px;
   margin: 40px 0 0 200px;
 }
 
+}
 
 
+@media only screen and (min-width: 1440px) {
+.home{
+  height: 1200px;
+}
+
+.about-pg{
+  height: 1000px;
+}
+
+.resume-pg{
+  height: 1500px;
+}
+
+.resume-ed{
+  padding: 20px;
+}
+
+.r-text{
+  font-size: 20px;
+}
+
+.resume-ex{
+
+}
+
+.work-pics{
+  width: 100%;
+}
+
+.pic-gallery{
+  grid-gap: 50px;
+}
+
+
+}
+
+
+@media only screen and (min-width: 1920px) {
+
+  #logo-style{
+    width: 170%;
+  }
+
+.home{
+  height: 1500px;
+}
+
+
+.about-pg{
+  height: 1400px;
+}
+
+.resume-pg{
+  height: 1500px;
+}
+
+.profi-pic{
+  width: 55%;
+}
+.resume-ed{
+  padding: 20px;
+}
+
+.r-text{
+  font-size: 20px;
+}
+
+.resume-ex{
+
+}
+
+.work-pics{
+  width: 100%;
+}
+
+.pic-gallery{
+  grid-gap: 50px;
 }

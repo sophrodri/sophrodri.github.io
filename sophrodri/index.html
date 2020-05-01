@@ -33,7 +33,7 @@
 
   <main>
 
-    <section class="home grid-sec">
+    <section class="home grid-sec" id="home">
       <header>
         <div class="logo">
 <a href="index.html">  <img src="images/logo.png" alt="" id="logo-style"></a>
@@ -43,6 +43,7 @@
         <nav class="menu">
           <div class="menu-container">
             <ul class="menu-list">
+                <li class="menu-item"> <a href="#home" class="menu-link">HOME</a></li>
               <li class="menu-item"> <a href="#about" class="menu-link">ABOUT</a></li>
               <li class="menu-item"> <a href="#work" class="menu-link">WORK</a>
 
@@ -380,16 +381,62 @@
   });
 
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 0) {
-      $('.logo').hide();
-      $('.logo-default').show();
-    // } else {
-    //   $('.logo').show();
-    //   $('.logo-default').hide();
-    // }
-  });
+      if ($(this).scrollTop()>1000)
+       {
+          $('.logo').hide(1000);
+       }
+      else
+       {
+        $('.logo').show(1000);
+       }
+   });
 
+  // $(window).scroll(function() {
+  //   if ($(this).scrollTop() > 0) {
+  //     $('.logo').hide();
+  //     $('.logo-default').show();
+  //   } else {
+  //     $('.logo').show();
+  //     $('.logo-default').hide();
+  //   }
+  // });
 
+  // Select all links with hashes
+  $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+        &&
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 100, function() {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+              return false;
+            } else {
+              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            };
+          });
+        }
+      }
+    });
 
 
 
