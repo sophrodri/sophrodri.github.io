@@ -198,18 +198,10 @@
 
 
     <section class="resume-pg grid-sec gradient" id="resume">
-      <!-- <div class="grad-banner">
 
-      </div>
-
-    <div class="grad-square">
-
-    </div> -->
 
       <div class="resume-div grid-sec">
 
-
-        <!-- <h1>my resume</h1> -->
 
         <div class="resume-ed">
           <h1>education</h1>
@@ -250,8 +242,10 @@
 
 
     <section class="contact-pg" id="contact">
+<div class=""id="mainform">
+  <iframe height="604" title="Embedded Wufoo Form" allowtransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none" src="https://sophrodri.wufoo.com/embed/z1p1140w0wiutx4/"> <a href="https://sophrodri.wufoo.com/forms/z1p1140w0wiutx4/">Fill out my Wufoo form!</a> </iframe>
+</div>
 
-<iframe height="604" title="Embedded Wufoo Form" allowtransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none" src="https://sophrodri.wufoo.com/embed/z1p1140w0wiutx4/"> <a href="https://sophrodri.wufoo.com/forms/z1p1140w0wiutx4/">Fill out my Wufoo form!</a> </iframe>
       <!-- <div id="mainform">
     Required Div Starts Here
     <form id="form">
@@ -282,185 +276,113 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <script type="text/javascript">
+  $(document).ready(function(){
 
 
-  </script>
+  (function(){
+    var words = [
+        'a designer',
+        'a fashion lover',
+        'gradient girl',
+        'sophrodri',
+
+        ], i = 0;
+    setInterval(function(){
+        $('#changingword').fadeOut(function(){
+            $(this).html(words[i=(i+1)%words.length]).fadeIn();
+        });
+    }, 1500);
+
+})();
 
 
-  <!-- Code injected by live-server -->
-  <script type="text/javascript">
-    // <![CDATA[  <-- For SVG support
-    if ('WebSocket' in window) {
-      (function() {
-        function refreshCSS() {
-          var sheets = [].slice.call(document.getElementsByTagName("link"));
-          var head = document.getElementsByTagName("head")[0];
-          for (var i = 0; i < sheets.length; ++i) {
-            var elem = sheets[i];
-            head.removeChild(elem);
-            var rel = elem.rel;
-            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-            }
-            head.appendChild(elem);
+
+$(".profile").on({
+  mouseenter: function(){
+    $("#img2").show(50);
+      $("#img").hide(50);
+  },
+    mouseleave: function(){
+      $("#img").hide(50);
+      $("#img2").show(50);
+    }
+        });
+
+
+
+    $('a[href*="#"]')
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+          &&
+          location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 100, function() {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              };
+            });
           }
         }
-        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-        var address = protocol + window.location.host + window.location.pathname + '/ws';
-        var socket = new WebSocket(address);
-        socket.onmessage = function(msg) {
-          if (msg.data == 'reload') window.location.reload();
-          else if (msg.data == 'refreshcss') refreshCSS();
-        };
-        console.log('Live reload enabled.');
-      })();
-    }
+      });
 
+//     $(window).scroll(function() {
+//     if ($(this).scrollTop()>1000)
+// {
+//  $('.logo').hide(1000);
+//   }
+//  else{$('.logo').show(1000);}
+// });
 
-    $(document).ready(function(){
-
-
-    (function(){
-      var words = [
-          'a designer',
-          'a fashion lover',
-          'gradient girl',
-          'sophrodri',
-
-          ], i = 0;
-      setInterval(function(){
-          $('#changingword').fadeOut(function(){
-              $(this).html(words[i=(i+1)%words.length]).fadeIn();
-          });
-      }, 1500);
-
-  })();
+$(window).scroll(function() {
+if ($(this).scrollTop() > 0) {
+$('.logo').hide();
+$('.logo-default').show();} else {
+$('.logo').show();
+        $('.logo-default').hide();
+     }
+      });
 
 
 
-  $(".profile").on({
-    mouseenter: function(){
-      $("#img2").show(50);
-        $("#img").hide(50);
-    },
-      mouseleave: function(){
-        $("#img").hide(50);
-        $("#img2").show(50);
-      }
-  });
-  // //Get the button
-  // var mybutton = document.getElementById("myBtn");
-  //
-  // // When the user scrolls down 20px from the top of the document, show the button
-  // window.onscroll = function() {scrollFunction()};
-  //
-  // function scrollFunction() {
-  //   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-  //     mybutton.style.display = "block";
-  //   } else {
-  //     mybutton.style.display = "none";
-  //   }
-  // }
-  //
-  // // When the user clicks on the button, scroll to the top of the document
-  // function topFunction() {
-  //   document.body.scrollTop = 0;
-  //   document.documentElement.scrollTop = 0;
-  // }
 
-  $("#submit").click(function() {
-  var name = $("#name").val();
-  var email = $("#email").val();
-  var message = $("#message").val();
-  var contact = $("#contact").val();
-  $("#returnmessage").empty(); // To empty previous error/success message.
-  // Checking for blank fields.
-  if (name == '' || email == '' || contact == '') {
-  alert("Please Fill Required Fields");
-  } else {
-  // Returns successful data submission message when the entered information is stored in database.
-  $.post("contact_form.php", {
-  name1: name,
-  email1: email,
-  message1: message,
-  contact1: contact
-  }, function(data) {
-  $("#returnmessage").append(data); // Append returned message to message paragraph.
-  if (data == "Your Query has been received, We will contact you soon.") {
-  $("#form")[0].reset(); // To reset form fields on success.
-  }
-  });
-  }
-  });
-
-  $(window).scroll(function() {
-      if ($(this).scrollTop()>1000)
-       {
-          $('.logo').hide(1000);
-       }
-      else
-       {
-        $('.logo').show(1000);
-       }
-   });
-
-  // $(window).scroll(function() {
-  //   if ($(this).scrollTop() > 0) {
-  //     $('.logo').hide();
-  //     $('.logo-default').show();
-  //   } else {
-  //     $('.logo').show();
-  //     $('.logo-default').hide();
-  //   }
-  // });
-
-  // Select all links with hashes
-  $('a[href*="#"]')
-    // Remove links that don't actually link to anything
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function(event) {
-      // On-page links
-      if (
-        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-        &&
-        location.hostname == this.hostname
-      ) {
-        // Figure out element to scroll to
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        // Does a scroll target exist?
-        if (target.length) {
-          // Only prevent default if animation is actually gonna happen
-          event.preventDefault();
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 100, function() {
-            // Callback after animation
-            // Must change focus!
-            var $target = $(target);
-            $target.focus();
-            if ($target.is(":focus")) { // Checking if the target was focused
-              return false;
-            } else {
-              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-              $target.focus(); // Set focus again
-            };
-          });
-        }
-      }
-    });
+      // end of doc ready
 
 
 
-// end of doc ready
-    });
-
-
-
-    // ]]>
+            });
   </script>
+
+
+  
+
+
+
+
+
+
+
+
 </body>
 
 </html>
