@@ -106,6 +106,7 @@
 
         <div class="profile">
           <img src="images/profile1.png" alt="" class="prof-pic" id="img">
+          <img src="images/profile2.jpg" alt="" class="prof-pic hide" id="img2">
         </div>
 
       </section>
@@ -114,7 +115,6 @@
       <!-- <div class="grad-bar">
 
       </div> -->
-
 
 
     </section>
@@ -335,6 +335,18 @@
 
   })();
 
+
+
+  $(".profile").on({
+    mouseenter: function(){
+      $("#img2").show(50);
+        $("#img").hide(50);
+    },
+      mouseleave: function(){
+        $("#img").hide(50);
+        $("#img2").show(50);
+      }
+  });
   // //Get the button
   // var mybutton = document.getElementById("myBtn");
   //

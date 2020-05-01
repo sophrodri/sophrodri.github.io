@@ -550,6 +550,7 @@ margin-top: 150px;
   line-height: .9;
 }
 
+
 .pic-gallery{
   display: grid;
   grid-template-columns: repeat(1, minmax(0, auto));
@@ -577,7 +578,14 @@ margin-top: 150px;
 #logo-style{
   width: 100%;}
 
+
+.home{
+  height: 1000px;
+}
+
+
 body{
+
 font-size: 1em;}
 
 .menu-item a{
@@ -737,6 +745,10 @@ font-size:  20px;
   height: 1500px;
 }
 
+.menu-item a{
+  font-size: 2.5em;
+}
+
 .resume-ed{
   padding: 20px;
 }
@@ -747,6 +759,10 @@ font-size:  20px;
 
 .resume-ex{
 
+}
+
+.grad-banner{
+  height: 500px;
 }
 
 .work-pics{

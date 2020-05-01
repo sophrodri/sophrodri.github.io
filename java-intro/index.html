@@ -34,41 +34,41 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
 
-    // $(document).ready(function(){
-    //   // Step One
-    //   $(".step1").click(function(){
-    //     $(".intro").hide(1000);
-    //     $(".ingredients").show(1000);
-    //     $
-    //   });
-    //   // Step Two
-    //   $(".step2").click(function(){
-    //     $(".ingredients").slideUp();
-    //     $(".mix").slideDown();
-    //   });
-    //     $("p.ing").on({
-    //       mouseenter: function(){
-    //         $(".ingredients img").fadeIn(1000);
-    //       },
-    //         mouseleave: function(){
-    //           $(".ingredients img").fadeOut(1000);
-    //         }
-    //     });
-    //     // Step three
-    //     $(".step3").click(function(){
-    //       $(".mix").remove();
-    //       $(".cook").css("display", "block");
-    //     });
-    //     // Step four
-    //     $(".step4").click(function(){
-    //       $(".cook").slideUp("slow");
-    //       $(".serve").show();
-    //       $(".serve").append("<p class='final'>Enjoy!</p>");
-    //
-    //     });
-    //
-    //
-    // });
+    $(document).ready(function(){
+      // Step One
+      $(".step1").click(function(){
+        $(".intro").hide(1000);
+        $(".ingredients").show(1000);
+        $
+      });
+      // Step Two
+      $(".step2").click(function(){
+        $(".ingredients").slideUp();
+        $(".mix").slideDown();
+      });
+        $("p.ing").on({
+          mouseenter: function(){
+            $(".ingredients img").fadeIn(1000);
+          },
+            mouseleave: function(){
+              $(".ingredients img").fadeOut(1000);
+            }
+        });
+        // Step three
+        $(".step3").click(function(){
+          $(".mix").remove();
+          $(".cook").css("display", "block");
+        });
+        // Step four
+        $(".step4").click(function(){
+          $(".cook").slideUp("slow");
+          $(".serve").show();
+          $(".serve").append("<p class='final'>Enjoy!</p>");
+
+        });
+
+
+    });
 
     </script>
 
